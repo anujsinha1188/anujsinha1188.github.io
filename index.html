@@ -29,7 +29,7 @@
 			<li>&lt;img&gt; is a self closing element</li>
 			<li>alt attribute of img element</li>
 			<li>The W3C recommends 2 spaces of indentation for nested HTML elements.</li>
-			<li>Sementic Tags &lt;b&gt; vs &lt;strong&gt; and &lt;i&gt; vs &lt;em&gt;</li>
+			<li><span class="highlight">Sementic Tags </span>&lt;b&gt; vs &lt;strong&gt; and &lt;i&gt; vs &lt;em&gt;</li>
 			<li>AREA - Accessible Rich Internet Application (role)</li>
 		</ul>
 		<h2>CSS Fundamentals</h2>
@@ -47,26 +47,67 @@
 		<h2>Styling with CSS</h2>
 		<h3>Colors</h3>
 		<ul>
-			<li>Foreground color - color, backgroung color - background-color </li>
+			<li>Foreground color - <span class="highlight">color</span>, 
+				backgroung color - <span class="highlight">background-color</span></li>
 			<li>147 named colors</li>
-			<li>RGB colors | rgb() | value - 0 to 255 | 16,777,216 possible colors | 
+			<li>RGB colors | <span class="highlight">rgb()</span> | value - 0 to 255 | 16,777,216 possible colors | 
 				<a href="https://color.adobe.com/create/color-wheel/" target="_blank">color picker</a></li>
 			<li>hex color codes | use base 16 | #FFFFFF == #FFF</li>
-			<li>HSL colors | hsl(_,_%,_%) | Hue(color, value 0 - 360) 
+			<li>HSL colors | <span class="highlight">hsl(_,_%,_%)</span> | Hue(color, value 0 - 360) 
 				Saturation (amount of gray 0% - 100%) Lightness (amount of white 0% - 100%)</li>
-			<li>opacity | rgba() | alpha value | range 0 - 1 | similarly hsla()</li>
+			<li>opacity | <span class="highlight">rgba()</span> | alpha value | range 0 - 1 | similarly hsla()</li>
 			<li>redundant declaration - for multiple version of different browsers</li>
 		</ul>
 		<h3>Fonts</h3>
 		<ul>
-			<li>"type of font" - typeface | font-family: _; | default - Times New Roman | 
+			<li>"type of font" - typeface | <span class="highlight">font-family: _;</span> | default - Times New Roman | 
 				enclose in "" if more than one word</li>
-			<li>typography | 2 types - serif (<span style="font-family:Georgia">Anuj</span> | eg - Times New Roman, Georgia) 
-				sans-serif(<span style="font-family:Arial">Anuj</span> | eg - Arial, Halvetica)</li>
+			<li>typography | 2 types - <span class="highlight">serif</span> (<span style="font-family:Georgia">Anuj</span> | 
+				eg - Times New Roman, Georgia) 
+				<span class="highlight">sans-serif</span>(<span style="font-family:Arial">Anuj</span> | 
+				eg - Arial, Halvetica)</li>
 			<li>fallback fonts | font-family: _, _, _;</li>
 			<li><a href="https://fonts.google.com/" target="_blank">Google Fonts</a> | 
 				&lt;link href="https://fonts.googleapis.com/css?family=Raleway" type="text/css" rel="stylesheet"&gt; | 
 				<span class="highlight">Raleway</span></li>
+			<li><span class="highlight">font-size=_</span> | 3 units of measurement | px - pixel | em = width of letter m | 
+				% - default is 16px</li>
+			<li><span class="highlight">line-height:_; | vertical spacing between lines | manipulating the leading</span></li>
+			<li><span class="highlight">word-spacing:_;</span> | default - 0.25em</li>
+			<li><span class="highlight">letter-spacing:_;</span> | kerning - technical term</li>
+			<li><span class="highlight">font-wight:bold/normal;</span></li>
+			<li><span class="highlight">font-style:italic;</span> - italicize<li>
+			<li><span class="highlight">text-transform:uppercase/lowercase;</span></li>
+			<li><span class="highlight">text-align:left/center/right</span></li>			
+		</ul>
+		<h2>Organizing HTML &amp; CSS</h2>
+		<h3>Classes, IDs, &amp; Divs</h3>
+		<ul>
+			<li>octothorpe Character - #</li>
+			<li>element.class</li>
+		</ul>
+		<h2>The CSS Box Model</h2>
+		<h3>Understanding the Box Modal</h3>
+		<ul>
+			<li>height/weidth | min-height/min-width | max-height/max=width</li>
+			<li>overflow: scroll/hidden</li>
+		</ul>
+		<h3>Borders</h3>
+		<ul>
+			<li>border-style: solid/dashed/dotted/double/groove/inset/outset/ridge/hidden/none;</li>
+			<li>border-width: thin/medium/thick/_px; | _px _px _px _px; (clockwise - top right biottom left)</li>
+			<li>border-top-width | border-right-width | border-bottom-width | border-left-width</li>
+			<li>border-color</li>
+			<li><span class="highlight">border</span>: width style color;</li>
+			<li><span class="highlight">border-radius</span>:_px/%</li>
+		</ul>
+		<h3>Content</h3>
+		<ul>
+			<li></li>
+		</ul>
+		<h3>Changing the Box Modal</h3>
+		<ul>
+			<li></li>
 		</ul>
 	</body>
 </html>
