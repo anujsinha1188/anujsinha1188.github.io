@@ -1,22 +1,47 @@
 <html>
-	<head>
-		<title>Anuj Sinha</title>
-	</head>
-	<body>
-		<h2>Functions</h2>
-		<ul>
-			<li>local Variable | global Variable</li>
-			<li>Math.random() | gives random number between 0 &amp; 1</li>
-		</ul>
-		<h3>Extra | Functions</h3>
-			<ul>
-				<li></li>
-			</ul>
-		<h3>External Resources</h3>
-		<p>A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.</p>
-		<p>
-			<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" 
-				target="_blank">JS Functions</a>
-		</p>
-	<body>
+  <head>
+    <title>Anuj Sinha</title>
+  </head>
+  <body>
+    <h2>Functions</h2>
+    <ul>
+      <li>local Variable | global Variable</li>
+      <li>Math.random() | gives random number between 0 &amp; 1</li>
+    </ul>
+    <h3>Extra | Functions</h3>
+    <ul>
+      <li>Primitive parameters are passed to functions by value | 
+        an object (Array) as a parameter - the function changes the object's properties</li>
+      <li>A function can refer to and call itself - the function's name | arguments.callee | 
+        an in-scope variable that refers to the function</li>
+      <li> A closure is an expression (typically a function) 
+        that can have free variables together with an environment that binds those variables</li>
+      <li>scope chaining</li>
+      <li> JavaScript allows for the nesting of functions and grants the inner function full access 
+        to all the variables and functions defined inside the outer function (and all other 
+        variables and functions that the outer function has access to). However, the outer
+        function does not have access to the variables and functions defined inside the inner function. 
+        This provides a sort of security for the variables of the inner function.
+        Also, since the inner function has access to the scope of the outer function, 
+        the variables and functions defined in the outer function will live longer than 
+        the duration of the outer function execution, if the inner function manages to 
+        survive beyond the life of the outer function. A closure is created when the inner 
+        function is somehow made available to any scope outside the outer function.</li>
+      <li>The arguments variable is "array-like", but not an array.
+        It is array-like in that is has a numbered index and a length property. 
+        However, it does not possess all of the array-manipulation methods.</li>
+      <li>Function Parameters - Default parameters - function a(x, y = 1) | 
+	    Rest parameter - function a(x, ...y)</li>
+      <li>Arrow function - Shorter function - => | Lexical this</li>
+      <li>Predefined functions - eval() | uneval() | isFinite() | isNaN() | parseFloat() | 
+        parseInt() | decodeURI() | decodeURIComponent() | encodeURI() | encodeURIComponent() | 
+        escape() | unescape()</li>
+    </ul>
+    <h3>External Resources</h3>
+      <p>A function is a JavaScript procedure—a set of statements that performs a task or calculates a value.</p>
+      <p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Functions" 
+          target="_blank">JS Functions</a>
+      </p>
+  </body>
 </html>
