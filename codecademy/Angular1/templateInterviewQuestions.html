@@ -17,10 +17,31 @@
         Gives us the instance of a function (object)- 
         You just  instantiated with the ‘new’ keyword and 
         you’ll add properties to ‘this’ and the service will return ‘this’.</li>
-      <li><a src="http://stackoverflow.com/questions/23074875/angularjs-factory-and-service"
+      <li>
+        <a src="http://stackoverflow.com/questions/23074875/angularjs-factory-and-service"
         target="_blank">
         service vs factory
-        </a></li>
+        </a>
+      </li>
     </ul>
-  <body>
+    <p>What is $q</p>
+    <ul>
+      <li>A service that helps you run functions asynchronously, 
+        and use their return values (or exceptions) when they are done processing.</li>
+      <li>$q constructor - $q(function(resolve, reject) {}); | returns a prmoise</li>
+      <li>The defrred API | new instance - $q.defer(); | 
+        Methods - resolve(value) reject(reason) notify(value) | Properties - promise</li>
+      <li>The Promise API | defered.promise | Methods - then(successCallback, [errorCallback], [notifyCallback])</li>
+      <li>
+        <a src="https://docs.angularjs.org/api/ng/service/$q"
+           target="_blank">
+          What is $q
+        </a>
+      </li>
+    </ul>
+    <p>singleton class in javaScript</p>
+    <p>directive restrict<p>
+    <p>how to catch emit and broadcast object</p>
+    <p>How to use Filter in controller</p>
+  </body>
 </html>
