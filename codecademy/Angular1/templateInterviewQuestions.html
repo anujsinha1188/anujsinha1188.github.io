@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anuj Sinha</title>
+  </head>
+  <body>
+    <p>Difference between Service and Factory</p>
+    <ul>
+      <li>Provider - services you can pass to .config() function</li>
+      <li>Values - neat way to pass simple values.</li>
+      <li>Factory - allow us to add some logic before creating the object. | 
+        Gives us the function's return value ie. 
+        You just create an object, add properties to it, then return that same object.
+        When you pass this service into your controller,
+        those properties on the object will now be available in that controller through your factory.</li>
+      <li>Service - creates a service object by using 'new' keyword. | 
+        Gives us the instance of a function (object)- 
+        You just  instantiated with the ‘new’ keyword and 
+        you’ll add properties to ‘this’ and the service will return ‘this’.</li>
+      <li><a src="http://stackoverflow.com/questions/23074875/angularjs-factory-and-service"
+        target="_blank">
+        service vs factory
+        </a></li>
+    </ul>
+  <body>
+</html>
