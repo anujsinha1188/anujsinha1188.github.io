@@ -14,6 +14,19 @@
     </ul>
     <h3>Extra | Using a Service</h3>
     <ul>
+	  <li>directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) 
+	    that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), 
+		or even to transform the DOM element and its children.</li>
+		<li>What does it mean to "compile" an HTML template? 
+		  For AngularJS, "compilation" means attaching directives to the HTML to make it interactive. 
+		  The reason we use the term "compile" is that the recursive process of attaching directives mirrors 
+		  the process of compiling source code in compiled programming languages.</li>
+		<li>Normalization : The normalization process is as follows:
+		  <ul>
+		    <li>Strip x- and data- from the front of the element/attributes.</li>
+			<li>Convert the :, -, or _-delimited name to camelCase.</li>
+		  </ul>
+		</li>
     </ul>
     <h3>External Resource</h3>
     <br />
@@ -24,3 +37,9 @@
     </p>
   </body>
 </html>
+
+
+
+
+
+

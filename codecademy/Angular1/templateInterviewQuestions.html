@@ -31,7 +31,13 @@
       <li>$q constructor - $q(function(resolve, reject) {}); | returns a prmoise</li>
       <li>The defrred API | new instance - $q.defer(); | 
         Methods - resolve(value) reject(reason) notify(value) | Properties - promise</li>
-      <li>The Promise API | defered.promise | Methods - then(successCallback, [errorCallback], [notifyCallback])</li>
+     <li>The Promise API | defered.promise | Methods - then(successCallback, [errorCallback], [notifyCallback]) | 
+	   catch(errorCallback) | finally(callback, notifyCallback)</li>
+	 <li>Chaining promises - </li>
+	 <li>Methods - defer() - Creates a Deferred object which represents a task which will finish in the future. |
+	   reject(reason) | when(value, [successCallback], [errorCallback], [progressCallback]); | 
+	   resolve(value, [successCallback], [errorCallback], [progressCallback]); | 
+	   all(promises); | race(promises);</li>
       <li>
         <a src="https://docs.angularjs.org/api/ng/service/$q"
            target="_blank">
@@ -45,3 +51,6 @@
     <p>How to use Filter in controller</p>
   </body>
 </html>
+
+
+
