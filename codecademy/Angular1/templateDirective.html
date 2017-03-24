@@ -9,37 +9,71 @@
     <ul>
       <li>app.factory to create a new service</li>
       <li>add dependency as - ['$http', function($http) { /* */ }]</li>
-	  <li>addition in controller as - ['$scope', 'service', function($scope, service) { /* */ }]</li>
-	  <li>Services are a way to make standalone communication logic which fetches data from a server.</li>
+      <li>addition in controller as - ['$scope', 'service', function($scope, service) { /* */ }]</li>
+      <li>Services are a way to make standalone communication logic which fetches data from a server.</li>
     </ul>
     <h3>Extra | Using a Service</h3>
     <ul>
-	  <li>directives are markers on a DOM element (such as an attribute, element name, comment or CSS class) 
-	    that tell AngularJS's HTML compiler ($compile) to attach a specified behavior to that DOM element (e.g. via event listeners), 
-		or even to transform the DOM element and its children.</li>
-		<li>What does it mean to "compile" an HTML template? 
-		  For AngularJS, "compilation" means attaching directives to the HTML to make it interactive. 
-		  The reason we use the term "compile" is that the recursive process of attaching directives mirrors 
-		  the process of compiling source code in compiled programming languages.</li>
-		<li>Normalization : The normalization process is as follows:
-		  <ul>
-		    <li>Strip x- and data- from the front of the element/attributes.</li>
-			<li>Convert the :, -, or _-delimited name to camelCase.</li>
-		  </ul>
-		</li>
+      <p>What are Directives?</p>
+      <li>directives are <strong>markers on a DOM element</strong> (such as an attribute, element name, comment or CSS class)
+        that <u>tell AngularJS's <strong>HTML compiler ($compile)</strong> to attach a specified behavior to that DOM element</u> (e.g. via event listeners),
+        or even to transform the DOM element and its children.</li>
+      <li>What does it mean to "compile" an HTML template?
+        For AngularJS, <u>"compilation" means attaching directives to the HTML to make it interactive.</u>
+        The reason we use the term "compile" is that the recursive process of attaching directives mirrors
+        the process of compiling source code in compiled programming languages.</li>
+      <li>Normalization - AngularJS normalizes an element's tag and attribute name to determine which elements match which directives.</li>
+      <li>The normalization process is as follows:</li>
+        <ul>
+          <li>Strip x- and data- from the front of the element/attributes.</li>
+          <li>Convert the :, -, or _-delimited name to camelCase.</li>
+        </ul>
+      <li>Directive types</li>
+      <li>Creating Directives - directives are registered on modules. 
+        To register a directive, you use the module.directive API.
+        module.directive takes the normalized directive name followed by a factory function |
+        The function is invoked using $injector.invoke </li>
+      <li>When you create a directive, it is restricted to attribute and elements only by default.</li>
+      <li>The restrict option is typically set to: 'A' | 'E' | 'C' - &gt;!-- directive: my-dir exp --&lt; | 
+        'M' - &gt;span class="my-dir: exp;"&lt;&gt;/span&lt;</li>
+      <li>These restrictions can all be combined as needed: 'AEC' </li>
+      <li>When should I use an attribute versus an element? 
+        Use an element when you are creating a component that is in control of the template.
+        Use an attribute when you are decorating an existing element with new functionality.</li>
+      <li>Isolating the Scope of a Directive - separate the scope inside a directive from the scope outside,
+        and then map the outer scope to a directive's inner scope. </li>
+      <li>the isolate scope of the directive isolates everything except models that
+        you've explicitly added to the scope: {} hash object</li>
+      <li>The scope option is an object that contains a property for each isolate scope binding.</li>
+      <li>a scope prototypically inherits from its parent. An isolated scope does not.</li>
+      <li>Creating a Directive that Manipulates the DOM - 
+        link option to register DOM listeners as well as update the DOM. | 
+        signature - function link(scope, element, attrs, controller, transcludeFn) | 
+        AngularJS scope object - jqLite-wrapped element that this directive matches - 
+        hash object with key-value pairs of normalized attribute names and their corresponding attribute values - 
+        directive's required controller instance(s) - a transclude linking function pre-bound to the correct transclusion scope.</li>
+      <li> When a DOM node that has been compiled with AngularJS's compiler is destroyed, it emits a $destroy event.
+        Similarly, when an AngularJS scope is destroyed, it broadcasts a $destroy event to listening scopes.</li>
+      <li>signature: element.on('$destroy', ...) | scope.$on('$destroy', ...)</li>
+      <li>transclude makes it so that the contents of a transcluded directive have whatever scope is outside the directive</li>
+      <li>&amp; binding allows a directive to trigger evaluation of an expression in the context of the original scope, 
+        at a specific time.</li>
+      <li>pass data from the isolate scope via an expression to the parent scope: 
+        passing a map of local variable names and values into the expression wrapper function.</li>
+      <li>require: '^^myTabs' - 
+        The ^^ prefix means that this directive searches for the controller on its parents.
+        (A ^ prefix would make the directive look for the controller on its own element or its parents;
+        without any prefix, the directive would look on its own element only.)</li>
+      <li>If it is necessary to reference the controller or any functions bound to the controller from the template, 
+        you can use the option controllerAs to specify the name of the controller as an alias</li>
+      <li>use controller when you want to expose an API to other directives. Otherwise use link.</li>
     </ul>
     <h3>External Resource</h3>
     <br />
     <p><a href="https://docs.angularjs.org/guide/services"
-      target="_blank">
+          target="_blank">
       Using a Service
       </a>
     </p>
   </body>
 </html>
-
-
-
-
-
-
