@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <title>Anuj Sinha</title>
+  </head>
+  <body>
+    <h2>Learn Java</h2>
+    <br/>
+    
+	
+	<h3><u>Introduction to Java | Primitive Data Types</u></h3>
+    <ul>
+      <li>data types - int (range -2,147,483,648 to 2,147,483,647) | boolean | char (in single quotes)</li>
+      <li>Variables | Comments | White space | Arithmetic Operators + - / * % | Relational Operators &lt; &lt;= &gt; &gt;= | 
+          Equality Operators == !=</li>
+    </ul>
+    
+	
+	<h4>Extra | Java Data Types | Primitive Data Types</h4>
+    <ul>
+      <li>Java is statically-typed (must declare variable before use)</li>
+      <li>8 Primitive Data Types:
+        <ul>
+          <li>byte - 8-bit signed two's compliment integer | Default value 0 | Range-2^7 to 2^7-1</li>
+          <li>short - 16-bit signed two's compliment integer | Default value 0 | Range -2^15 to 2^15-1</li>
+          <li>int - 32-bit signed two's compliment integer | Default value 0 | Range -2^31 to 2^31-1 (0 to 2^32 in unsigned in Java 8)</li>
+          <li>long - 64-bit two's compliment integer | Default value 0L | Range -2^63 to 2^63-1 (0 to 2^64-1 in unsigned in Java 8)</li>
+          <li>float - single-precision 32-bit IEEE 754 floating point | Default value 0.0f | 
+            Do not use for precise value - use java.math.BigDecimal for precise value (currency)</li>
+          <li>double - double-precision 64-bit IEEE 754 floating point | Default value 0.0d | Do not use for precise value</li>
+          <li>boolean - size isn't precisely defined | Default value false</li>
+          <li>char - single 16-bit Unicode character | Default value \u0000 | Range \u0000 (0) to \uffff (65,535)</li>
+          <li>String - NOT primitive data type | Default value null | 
+            enclosing character string in double quotes create new String object | String objects are immutable.</li>
+        </ul>
+      </li>
+	  <li>Literals - A literal is the source code representation of a fixed value (int a = 1)</li>
+	  <li>Integer Literals - recommended to use upper case L as lower case letter l is hard to distinguish from digit 1 | 
+	    Can be expressed in:
+        <ul>
+		  <li>Decimal, base 10  (int a = 1)</li>
+		  <li>Hexadecimal, base 16 | 0x indicates hexadecimal (int a = 0x1)</li>
+		  <li>Binary, base 2 | 0b indicates binary (int a = 0b1)</li>
+		</ul>
+	  </li>
+	  <li>Floating-Point Literals - type float ends with F/f | type double ends with D/d (optional) | 
+	    Can also be expressed with scientific notation E/e | double d1 = 1.234e2D</li>
+	  </li>
+	  <li>Character and String Literals
+	    <ul>
+		  <li>char and String may contain Unicode(UTF-16) character.</li>
+		  <li>can use a "unicode escape" such as '\u0108'</li>
+		  <li>special escape sequence - \b (backspace) | \t (tab) | \n (line feed) | \f (form feed) | \r (carriage return) | 
+		    \" (double quote) | \' (single quote) | \\ (backslash)</li>
+	      <li>class literal - formed by taking a class name and appending ".class" (String.class) | 
+		    refers to the object (of type class) that represent the type itself</li>
+		</ul>
+	  </li>
+	  <li>Using Underscore Character in Numeric Literals - In Java SE 7 and later, 
+	    any number of underscore characters (_) can appear anywhere between digits in a numerical literal.
+		(improve the readability of code)
+    </ul>
+    
+	
+	<h4>Extra | Java Operators | Assignment, Arithmetic, and Unary Operators</h4>
+    <ul>
+	  <li>The Simple Assignment Operator - =</li>
+	  <li>The Arithmetic Operators - + | - | * | / | %</li>
+	  <li>The Unary Operators - +(positive without this) | - | ++ | -- | !</li>
+    </ul>
+    
+	<h4>External Resource:</h4>
+    <p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"
+      target="_blank">
+      Java Data Types
+      </a>
+    </p>
+    
+	<p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html"
+      target="_blank">
+      Java Operators
+      </a>
+    </p>
+	
+	
+	
+	<h3><u>Conditionals and Control Flow - (if/else if/else | switch)</u></h3>
+    <ul>
+	  <li>Three Boolean operators - && , || , !</li>
+      <li>Boolean operator precedence - order in which they are evaluated</li>
+	  <li> In order - first - !, second - &&, third - ||</li>
+	  <li>Ternary conditional statement - condition ? true statement : false statement</li>
+    </ul>
+	
+	
+	<h4>Extra | More Java Operators | Equality, Relational, and Conditional Operators</h4>
+    <ul>
+	  <li>The Equality and Relational Operators - ==, !=, &gt;, &gt;=, &lt;, &lt;=</li>
+	  <li>The Conditional Operators - &&, ||, Ternary operator (?:)</li>
+	  <li>The Type Comparison Operator instanceof
+	    <ul>
+		  <li>The instanceof operator compares an object to a specified type.</li>
+		  <li>test if an object is an instance of a class, an instance of a subclass, 
+		    or an instance of a class that implements a particular interface.</li>
+		  <li>null is not an instance of anything</li>
+		</ul>
+	  </li>
+    </ul>
+	
+	
+	<h4>Extra | Control Flow Statements | The if-then and if-then-else Statements</h4>
+    <ul>
+	  <li>The if-then Statement | The if-then-else Statement</li>
+	</ul>
+	
+	<h4>External Resource:</h4>
+    <p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html"
+      target="_blank">
+      More Java Operators
+      </a>
+    </p>
+    
+	<p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"
+      target="_blank">
+      Control Flow Statements
+      </a>
+    </p
+	
+	
+	
+	<h3><u>Object-Oriented Java</u></h3>
+	<ul>
+	  <li>Instance Variables - save those specific details we want the class to include.</li>
+	  <li>The void keyword (which means "completely empty") indicates to the method that no value is returned after calling that method.</li>
+	  <li>Class: a blueprint for how a data structure should function</li>
+	  <li>Constructor: instructs the class to set up the initial state of an object</li>
+	  <li>Object: instance of a class that stores the state of a class</li>
+	  <li>Method: set of instructions that can be called on an object</li>
+	  <li>Parameter: values that can be specified when creating an object or calling a method</li>
+	  <li>Return value: specifies the data type that a method will return after it runs</li>
+	  <li>Inheritance: allows one class to use functionality defined in another class</li>
+	</ul>
+	
+	
+	<h4>Extra | Object-Oriented Java | Object-Oriented Programming Concepts</h4>
+	<ul>
+	  <li></li>
+	</ul>
+	
+	
+	<h4>Extra | Java Access Control | Controlling Access to Members of a Class</h4>
+	<ul>
+	  <li></li>
+	</ul>
+	
+	
+	<h4>External Resource:</h4>
+    <p><a href="https://docs.oracle.com/javase/tutorial/java/concepts/"
+      target="_blank">
+      Object-Oriented Java
+      </a>
+    </p>
+    
+	<p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"
+      target="_blank">
+      Java Access Control
+      </a>
+    </p>
+  
+  </body>
+</html>
