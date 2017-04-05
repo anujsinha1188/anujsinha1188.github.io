@@ -83,7 +83,8 @@
     </p>
 	
 	
-	
+	<hr />
+	<br />
 	<h3><u>Conditionals and Control Flow - (if/else if/else | switch)</u></h3>
     <ul>
 	  <li>Three Boolean operators - && , || , !</li>
@@ -124,10 +125,10 @@
       target="_blank">
       Control Flow Statements
       </a>
-    </p
+    </p>
 	
-	
-	
+	<hr />
+	<br />
 	<h3><u>Object-Oriented Java</u></h3>
 	<ul>
 	  <li>Instance Variables - save those specific details we want the class to include.</li>
@@ -144,13 +145,80 @@
 	
 	<h4>Extra | Object-Oriented Java | Object-Oriented Programming Concepts</h4>
 	<ul>
-	  <li></li>
+		<li><strong>What is an Object?</strong>
+	    <ul>
+		  <li>Two characteristics: state (variables) and behaviour (functions)</li>
+		  <li>Hiding internal state and requiring all interaction to be performed through an object's methods is known as data encapsulation</li>
+		  <li></li>Benefits of Bundling code into individual software objects: 
+		    Modularity, Information-hiding, Code re-use, Pluggability and debugging ease</li>
+		</ul>
+	  </li>
+	  <li><strong>What is a Class?</strong>
+	    <ul>
+		  <li>A class is a blueprint or prototype from which objects are created.</li>
+		  <li>In object-oriented terms, we say that created object is an instance of the class of objects.</li>
+		</ul>
+	  </li>
+	  <li><strong>What is Inheritance?</strong>
+	    <ul>
+		  <li>Object-oriented programming allows classes to inherit commonly used state and behavior from other classes.</li>
+		  <li>In the Java programming language, each class is allowed to have one direct superclass (using extends), 
+		    and each superclass has the potential for an unlimited number of subclasses</li>
+		</ul>
+	  </li>
+	  <li><strong>What is an Interface?</strong>
+	    <ul>
+		  <li>Interfaces form a contract between the class and the outside world,
+		    and this contract is enforced at build time by the compiler.</li>
+		  <li>When a class implements an interface, it promises to provide the behavior published by that interface.</li>
+		</ul>
+	  </li>
+	  <li><strong>What is a Package?</strong>
+	    <ul>
+		  <li>A package is a namespace that organizes a set of related classes and interfaces.</li>
+		  <li>The library (provided by java platform)is known as the "Application Programming Interface", or "API" for short.</li>
+		  <li>
+		    <a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank">
+		      Java Platform API Specification:</a>
+		    contains the complete listing for all packages, interfaces, classes, fields, and methods 
+		    supplied by the Java SE platform.</li>
+		</ul>
+	  </li>
 	</ul>
 	
 	
 	<h4>Extra | Java Access Control | Controlling Access to Members of a Class</h4>
 	<ul>
-	  <li></li>
+	  <li>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</li>
+	  <li>There are two levels of access control:
+	    <ul>
+		  <li>At the top level—public, or package-private (no explicit modifier).</li>
+          <li>At the member level—public, private, protected, or package-private (no explicit modifier).</li>
+		</ul>
+	  </li>The following table shows the access to members permitted by each modifier.
+	    <ul>
+		  <li>Access Levels</li>
+		  <li>
+		    <table>
+			  <tr>
+			    <th>Modifier</th> <th>Class</th> <th>Package</th> <th>Subclass</th> <th>World</th>
+			  </tr>
+			  <tr>
+			    <td>public</td> <td>Y</td> <td>Y</td> <td>Y</td> <td>Y</td>
+			  </tr>
+			  <tr>
+			    <td>protected</td> <td>Y</td> <td>Y</td> <td>Y</td> <td>N</td>
+			  </tr>
+			  <tr>
+			    <td>no modifier</td> <td>Y</td> <td>Y</td> <td>N</td> <td>N</td>
+			  </tr>
+			  <tr>
+			    <td>private</td> <td>Y</td> <td>N</td> <td>N</td> <td>N</td>
+			  </tr>
+			</table>
+		  </li>
+		</ul>
+	  </li>
 	</ul>
 	
 	
@@ -166,6 +234,11 @@
       Java Access Control
       </a>
     </p>
+	
+	
+	<hr />
+	<br />
+  
   
   </body>
 </html>
