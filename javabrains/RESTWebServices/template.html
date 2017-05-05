@@ -4,280 +4,59 @@
   <title>Anuj Sinha</title>
   </head>
   <body>
-    <h2>Learn Java</h2>
-    <br/>
-    
-	
-	<h3><u>Introduction to Java | Primitive Data Types</u></h3>
+    <h2>RESTful APIs with JAX-RS</h2>
     <ul>
-      <li>data types - int (range -2,147,483,648 to 2,147,483,647) | boolean | char (in single quotes)</li>
-      <li>Variables | Comments | White space | Arithmetic Operators + - / * % | Relational Operators &lt; &lt;= &gt; &gt;= | 
-          Equality Operators == !=</li>
+      <li>REST API concepts</li>
+      <li>Implementation of JAX-RS</li>
     </ul>
-    
-	
-	<h4>Extra | Java Data Types | Primitive Data Types</h4>
+    <hr />
+
+    <p>Web Services - Exposed to internet for programetic access.</p
+    <p>Web Services Types</p>
     <ul>
-      <li>Java is statically-typed (must declare variable before use)</li>
-      <li>8 Primitive Data Types:
-        <ul>
-          <li>byte - 8-bit signed two's compliment integer | Default value 0 | Range-2^7 to 2^7-1</li>
-          <li>short - 16-bit signed two's compliment integer | Default value 0 | Range -2^15 to 2^15-1</li>
-          <li>int - 32-bit signed two's compliment integer | Default value 0 | Range -2^31 to 2^31-1 (0 to 2^32 in unsigned in Java 8)</li>
-          <li>long - 64-bit two's compliment integer | Default value 0L | Range -2^63 to 2^63-1 (0 to 2^64-1 in unsigned in Java 8)</li>
-          <li>float - single-precision 32-bit IEEE 754 floating point | Default value 0.0f | 
-            Do not use for precise value - use java.math.BigDecimal for precise value (currency)</li>
-          <li>double - double-precision 64-bit IEEE 754 floating point | Default value 0.0d | Do not use for precise value</li>
-          <li>boolean - size isn't precisely defined | Default value false</li>
-          <li>char - single 16-bit Unicode character | Default value \u0000 | Range \u0000 (0) to \uffff (65,535)</li>
-          <li>String - NOT primitive data type | Default value null | 
-            enclosing character string in double quotes create new String object | String objects are immutable.</li>
-        </ul>
-      </li>
-	  <li>Literals - A literal is the source code representation of a fixed value (int a = 1)</li>
-	  <li>Integer Literals - recommended to use upper case L as lower case letter l is hard to distinguish from digit 1 | 
-	    Can be expressed in:
-        <ul>
-		  <li>Decimal, base 10  (int a = 1)</li>
-		  <li>Hexadecimal, base 16 | 0x indicates hexadecimal (int a = 0x1)</li>
-		  <li>Binary, base 2 | 0b indicates binary (int a = 0b1)</li>
-		</ul>
-	  </li>
-	  <li>Floating-Point Literals - type float ends with F/f | type double ends with D/d (optional) | 
-	    Can also be expressed with scientific notation E/e | double d1 = 1.234e2D</li>
-	  </li>
-	  <li>Character and String Literals
-	    <ul>
-		  <li>char and String may contain Unicode(UTF-16) character.</li>
-		  <li>can use a "unicode escape" such as '\u0108'</li>
-		  <li>special escape sequence - \b (backspace) | \t (tab) | \n (line feed) | \f (form feed) | \r (carriage return) | 
-		    \" (double quote) | \' (single quote) | \\ (backslash)</li>
-	      <li>class literal - formed by taking a class name and appending ".class" (String.class) | 
-		    refers to the object (of type class) that represent the type itself</li>
-		</ul>
-	  </li>
-	  <li>Using Underscore Character in Numeric Literals - In Java SE 7 and later, 
-	    any number of underscore characters (_) can appear anywhere between digits in a numerical literal.
-		(improve the readability of code)
+      <li>REST Web Services</li>
+      <li>SOAP Web Services</li>
     </ul>
-    
-	
-	<h4>Extra | Java Operators | Assignment, Arithmetic, and Unary Operators</h4>
+    <p>Web Services Characterstics</p>
     <ul>
-	  <li>The Simple Assignment Operator - =</li>
-	  <li>The Arithmetic Operators - + | - | * | / | %</li>
-	  <li>The Unary Operators - +(positive without this) | - | ++ | -- | !</li>
+      <li>HTTP exchange</li>
+      <li>Protocol</li>
     </ul>
-    
-	<h4>External Resource:</h4>
-    <p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html"
-      target="_blank">
-      Java Data Types
-      </a>
-    </p>
-    
-	<p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op1.html"
-      target="_blank">
-      Java Operators
-      </a>
-    </p>
-	
-	
-	<hr />
-	<br />
-	<h3><u>Conditionals and Control Flow - (if/else if/else | switch)</u></h3>
+    <p>Service Definition - WSDL</p>
+    <p>SOAP Web Service Specification - set of rules</p>
+    <p>REST - introduced by Roy Fielding</p>
+    <p>REpresentational State Transfer</p>
+    <hr />
+
+    <p>HTTP - Hyper Text Transfer Protocol - Resource based URIs</p>
+    <p>HTTP Methods - GET | POST | PUT | DELETE | HEAD | OPTIONS</p>
+    <p>HTTP Status code - 200 (Success) | 500 (Server error) | 404 (Not found)</p>
+    <p>Message Headers - xml (text/xml) | Json (application/json)</p>
+    <p>Content negotiation</p>
+    <hr />
+
+    <p>Two types of resouce URIs</p>
     <ul>
-	  <li>Three Boolean operators - && , || , !</li>
-      <li>Boolean operator precedence - order in which they are evaluated</li>
-	  <li> In order - first - !, second - &&, third - ||</li>
-	  <li>Ternary conditional statement - condition ? true statement : false statement</li>
+      <li><p>Instance Resource URIs</p></li>
+      <li><p>Collection Resorce URIs</p></li>
     </ul>
-	
-	
-	<h4>Extra | More Java Operators | Equality, Relational, and Conditional Operators</h4>
+
+    <p>Method Idempotence - (GET POST DELETE) (POST is not)</p>
+
+    <hr />
+    <p>Resource Representations</p>
+    <p>Message headers in HTTP</p>
+    <p>Status Codes</p>
     <ul>
-	  <li>The Equality and Relational Operators - ==, !=, &gt;, &gt;=, &lt;, &lt;=</li>
-	  <li>The Conditional Operators - &&, ||, Ternary operator (?:)</li>
-	  <li>The Type Comparison Operator instanceof
-	    <ul>
-		  <li>The instanceof operator compares an object to a specified type.</li>
-		  <li>test if an object is an instance of a class, an instance of a subclass, 
-		    or an instance of a class that implements a particular interface.</li>
-		  <li>null is not an instance of anything</li>
-		</ul>
-	  </li>
+      <li>1** Informational</li>
+      <li>2** Success</li>
+      <li>3** Redirection</li>
+      <li>4** Client Error</li>
+      <li>5** Server Error</li>
     </ul>
-	
-	
-	<h4>Extra | Control Flow Statements | The if-then and if-then-else Statements</h4>
-    <ul>
-	  <li>The if-then Statement | The if-then-else Statement</li>
-	</ul>
-	
-	<h4>External Resource:</h4>
-    <p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/op2.html"
-      target="_blank">
-      More Java Operators
-      </a>
-    </p>
-    
-	<p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/if.html"
-      target="_blank">
-      Control Flow Statements
-      </a>
-    </p>
-	
-	<hr />
-	<br />
-	<h3><u>Object-Oriented Java</u></h3>
-	<ul>
-	  <li>Instance Variables - save those specific details we want the class to include.</li>
-	  <li>The void keyword (which means "completely empty") indicates to the method that no value is returned after calling that method.</li>
-	  <li>Class: a blueprint for how a data structure should function</li>
-	  <li>Constructor: instructs the class to set up the initial state of an object</li>
-	  <li>Object: instance of a class that stores the state of a class</li>
-	  <li>Method: set of instructions that can be called on an object</li>
-	  <li>Parameter: values that can be specified when creating an object or calling a method</li>
-	  <li>Return value: specifies the data type that a method will return after it runs</li>
-	  <li>Inheritance: allows one class to use functionality defined in another class</li>
-	</ul>
-	
-	
-	<h4>Extra | Object-Oriented Java | Object-Oriented Programming Concepts</h4>
-	<ul>
-		<li><strong>What is an Object?</strong>
-	    <ul>
-		  <li>Two characteristics: state (variables) and behaviour (functions)</li>
-		  <li>Hiding internal state and requiring all interaction to be performed through an object's methods is known as data encapsulation</li>
-		  <li></li>Benefits of Bundling code into individual software objects: 
-		    Modularity, Information-hiding, Code re-use, Pluggability and debugging ease</li>
-		</ul>
-	  </li>
-	  <li><strong>What is a Class?</strong>
-	    <ul>
-		  <li>A class is a blueprint or prototype from which objects are created.</li>
-		  <li>In object-oriented terms, we say that created object is an instance of the class of objects.</li>
-		</ul>
-	  </li>
-	  <li><strong>What is Inheritance?</strong>
-	    <ul>
-		  <li>Object-oriented programming allows classes to inherit commonly used state and behavior from other classes.</li>
-		  <li>In the Java programming language, each class is allowed to have one direct superclass (using extends), 
-		    and each superclass has the potential for an unlimited number of subclasses</li>
-		</ul>
-	  </li>
-	  <li><strong>What is an Interface?</strong>
-	    <ul>
-		  <li>Interfaces form a contract between the class and the outside world,
-		    and this contract is enforced at build time by the compiler.</li>
-		  <li>When a class implements an interface, it promises to provide the behavior published by that interface.</li>
-		</ul>
-	  </li>
-	  <li><strong>What is a Package?</strong>
-	    <ul>
-		  <li>A package is a namespace that organizes a set of related classes and interfaces.</li>
-		  <li>The library (provided by java platform)is known as the "Application Programming Interface", or "API" for short.</li>
-		  <li>
-		    <a href="https://docs.oracle.com/javase/8/docs/api/index.html" target="_blank">
-		      Java Platform API Specification:</a>
-		    contains the complete listing for all packages, interfaces, classes, fields, and methods 
-		    supplied by the Java SE platform.</li>
-		</ul>
-	  </li>
-	</ul>
-	
-	
-	<h4>Extra | Java Access Control | Controlling Access to Members of a Class</h4>
-	<ul>
-	  <li>Access level modifiers determine whether other classes can use a particular field or invoke a particular method.</li>
-	  <li>There are two levels of access control:
-	    <ul>
-		  <li>At the top level—public, or package-private (no explicit modifier).</li>
-          <li>At the member level—public, private, protected, or package-private (no explicit modifier).</li>
-		</ul>
-	  </li>The following table shows the access to members permitted by each modifier.
-	    <ul>
-		  <li>Access Levels</li>
-		  <li>
-		    <table>
-			  <tr>
-			    <th>Modifier</th> <th>Class</th> <th>Package</th> <th>Subclass</th> <th>World</th>
-			  </tr>
-			  <tr>
-			    <td>public</td> <td>Y</td> <td>Y</td> <td>Y</td> <td>Y</td>
-			  </tr>
-			  <tr>
-			    <td>protected</td> <td>Y</td> <td>Y</td> <td>Y</td> <td>N</td>
-			  </tr>
-			  <tr>
-			    <td>no modifier</td> <td>Y</td> <td>Y</td> <td>N</td> <td>N</td>
-			  </tr>
-			  <tr>
-			    <td>private</td> <td>Y</td> <td>N</td> <td>N</td> <td>N</td>
-			  </tr>
-			</table>
-		  </li>
-		</ul>
-	  </li>
-	</ul>
-	
-	
-	<h4>External Resource:</h4>
-    <p><a href="https://docs.oracle.com/javase/tutorial/java/concepts/"
-      target="_blank">
-      Object-Oriented Java
-      </a>
-    </p>
-    
-	<p><a href="https://docs.oracle.com/javase/tutorial/java/javaOO/accesscontrol.html"
-      target="_blank">
-      Java Access Control
-      </a>
-    </p>
-	
-	
-	<hr />
-	<br />
-	<h3><u>Data Structures</u></h3>
-	<ul>
-	  <li>for loop</li>
-	  <li>ArrayList - stores a list of data of a specified type. | zero-indexed</li>
-	  <li>The add method .add(index, value) -  will insert value at the index position into the list. 
-	    All other element indices will be shifted one position higher.</li>
-	  <li>for each loop</li>
-	  <li>HashMap - contains a set of keys and a value for each key.</li>
-	  <li>.get(key) | .put(key, value) | .keySet() - to get Key set as array from HashMap</li>
-	</ul>
-	
-	
-	<h4>Extra | For Loops | The for Statement</h4>
-	
-	<h4>Extra | Javadoc: ArrayList</h4>
-	
-	<h4>Extra | Javadoc: HashMap</h4>
-	
-	
-	<h4>External Resource:</h4>
-    <p><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/for.html"
-      target="_blank">
-      For Loops
-      </a>
-    </p>
-    
-	<p><a href="http://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html"
-      target="_blank">
-      Javadoc: ArrayList
-      </a>
-    </p>
-	
-	<p><a href="http://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html"
-      target="_blank">
-      Javadoc: HashMap
-      </a>
-    </p>
-	
-	<hr />
-	<br />
-	
-  </body>
+    <hr />
+
+    <p>HATEOS - Hypermedia As The Engine Of Application Status</p>
+
+  <body>
 </html>
