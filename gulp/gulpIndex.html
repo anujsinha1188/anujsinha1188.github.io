@@ -1,0 +1,30 @@
+gulp need node js - nodejs.org
+npm install -g gulp
+atom . - opens the atom on the directory you are in
+npm init - to create package.json file 
+npm install --save-dev gulp - to install gulp and save it as dev dependency and not as production dependency
+const gulp = require('gulp');
+
+gulp.task("nameOfTask", anonymous function that return work); 
+gulp nameOfTask - to run the task
+nameOfTask as 'default' - to create defult task.
+gulp - will run task with name as 'default'
+
+gulp.src('filesOrTypesInFolderWithFolder').pipe(gulp.dest('destinationFolder'));
+src - soource of file, dest - destination of file, pipe - copy the desired file from src to dest.
+
+gulp-imagemin - a tool available
+npm install --save-dev gulp-imagemin
+
+gulp-uglify - a tool to MINIFY javaScript code
+npm install --save-dev gulp-uglify
+
+gulp-sass - convert scss file to css file(sass file use scss(.scss) extention)
+npm install --save-dev gulp-sass
+
+gulp.task('nameOfTask' ['otherDependentTask1','otherDependentTask2]); - add dependency in sequence to the task
+
+gulp-concat - to concat 2 js files
+npm install --save-dev gulp-sass
+
+gulp watch - to continously build the code
