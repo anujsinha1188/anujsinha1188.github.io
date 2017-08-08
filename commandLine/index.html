@@ -1,0 +1,83 @@
+Url for Appendix of commands:
+https://www.codecademy.com/articles/command-line-commands
+
+Navigating the File System:
+__________________________
+
+Commands:
+ls - the command line looks at the folder you are in, and then "lists" the files and folders inside it.
+pwd - "print working directory" - It outputs the name of the directory you are currently in, called the working directory.
+cd - "change directory" - switches you into the directory you specify.
+cd .. - To move up one directory.
+mkdir - "make directory" - It takes in a directory name as an argument, and then creates a new directory in the current working directory.
+touch - creates a new file inside the working directory. It takes in a filename as an argument, and then creates an empty file in the current working directory.
+ls -a - lists all contents, including hidden files and directories.
+ls -l - lists all contents of a directory in long format
+ls -t - order files and directories by the time they were last modified.
+ls -alt - lists all contents, including hidden files and directories, in long format, ordered by the date and time they were last modified.
+
+Information:
+$ - shell prompt
+-a - option.
+
+Files started with a dot are hidden, and don't appear when using ls alone.
+
+The -l option lists files and directories as a table. - seven columns separated by spaces. Here's what each column means:
+1. Access rights. These are actions that are permitted on a file or directory.
+2. Number of hard links. This number counts the number of child directories and files. This number includes the parent directory link (..) and current directory link (.).
+3. The username of the file's owner. Here the username is cc.
+4. The name of the group that owns the file. Here the group name is eng.
+5. The size of the file in bytes.
+6. The date & time that the file was last modified.
+7. The name of the file or directory.
+
+
+Viewing and Changing the File System:
+____________________________________
+
+Commands:
+cp - copies files or directories. (source file as the first argument and the destination directory as the second argument)
+mv - To move a file into a directory (source file as the first argument and the destination directory as the second argument)
+mv  - To rename a file - with the old file as the first argument and the new file as the second argument
+rm - deletes files and directories.
+rm -r - modifies the behavior of the rm command. (-r stands for "recursive") it's used to delete a directory and all of its child directories.
+
+Information:
+rm deletes files and directories permanently.
+
+* - wildcards - select all file names.
+
+
+Redirection:
+___________
+
+Commands:
+echo - accepts the string "anyString" as standard input, and echoes the string "anyString" back to the terminal as standard output.
+> - takes the standard output of the command on the left, and redirects it to the file on the right.
+cat - outputs the contents of a file to the terminal.
+>> - takes the standard output of the command on the left and appends (adds) it to the file on the right.
+<  - takes the standard input from the file on the right and inputs it into the program on the left.
+| - takes the standard output of the command on the left, and pipes it as standard input to the command on the right. 
+wc - outputs the number of lines, words, and characters
+sort - takes the standard input and orders it alphabetically for the standard output.
+uniq - "unique" - filters out adjacent, duplicate lines in a file. 
+grep - "global regular expression print" - searches files for lines that match a pattern and returns the results. It is also case sensitive.
+grep -i - enables the command to be case insensitive. 
+grep -R - "recursive" - searches all files in a directory and outputs filenames and lines containing matched results.
+grep -Rl - -R stands for "recursive" and l stands for "files with matches" - searches all files in a directory and outputs only filenames with matched results.
+sed - "stream editor" - accepts standard input and modifies it based on an expression,
+sed 's/theSearchString/theReplacementString' fileName - s: stands for "substitution"
+sed 's/theSearchString/theReplacementString/g' fileName - g: stands for "global"
+
+Information:
+standard input - abbreviated as stdin, is information inputted into the terminal through the keyboard or input device.
+standard output - abbreviated as stdout, is the information outputted after a process is run.
+standard error - abbreviated as stderr, is an error message outputted by a failed process.
+
+> - overwrites all original content
+
+
+Configuring the Environment:
+___________________________
+
+
