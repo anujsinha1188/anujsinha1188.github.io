@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Anuj Sinha</title>
+  </head>
+  <body>
+    <h3>INTERMEDIATE JAVASCRIPT MODULES</h3>
+    <ul>
+      <li>JavaScript modules are reusable pieces of code that can be exported from one program
+        and imported for use in another program.</li>
+      <li>The pattern to export modules:
+        <ul>
+          <li>Define an object to represent the module.</li>
+          <li>Add data or behavior to the module.</li>
+          <li>Export the module. | module.exports = ObjectToExport</li>
+         </ul>
+      </li>
+      <li>The pattern to import a module:
+        <ul>
+          <li>Import the module. | const VariableName = require(PathToImport)</li>
+          <li>Use the module and its properties within a program.</li>
+         </ul>
+      </li>
+      <li>default export | default export ObjectToExport | module.exports = ObjectToExport</li>
+      <li>import | import VariableName from PathToImport | const VariableName = require(PathToImport)</li>
+      <li>Named Export | allow us to export data through the use of variables.
+        <ul>
+          <li>export { nameOFObjToExport, nameOfObjToExport2 };</li>
+          <li>import { nameOFObjToExport, nameOfObjToExport2 } from './jsFileName'</li>
+          <li>Named exports can be exported as soon as they are declared, 
+            by placing the keyword export in front of variable declarations.</li>
+        </ul>
+      </li>
+      <li>Export as | Named exports also offer a way to change the name of variables when we export or import them with as keyword.</li>
+      <li>Import as | An object exported could be aliased with the as keyword when imported. | 
+        Another way of using aliases is to import the entire module as an alias | import * as nameOfObject</li>
+    </ul>
+  </body>
+</html>
