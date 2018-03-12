@@ -1,0 +1,24 @@
+--> 1) Architecture od Angular 2 App
+4 key players: Components, Directives, Routers, Services.
+
+Components: Encapsulates the template, data and the behaviour of a view.
+A plain typscript class
+Components are decoupled from DOM instead we use binding
+
+Service: logic not releted to view, A plain class that encapsulate any non user interface logic
+
+Router: for navigation
+
+Directive: To modify DOM elements and/or extend their behaviour
+
+--> 2) Getting the Tools:
+nodejs
+npm install -g typescript
+npm install -g angular-cli
+ng bew project_name
+ng serve
+npm start
+
+--> 3) Typescript Compilation:
+
+
