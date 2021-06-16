@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Columns</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style type="text/css">
+        body {
+            font-size: large;
+            font-weight: bolder;
+        }
+
+        .container {
+            background-color: pink;
+        }
+
+        .container-fluid {
+            background-color: #99d6ff;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Creating columns inside a row-->
+    <div class="container-fluid" style="border: 5px solid #ff6666">
+        I am a div with class .container-fluid
+        <div class="row" style="border: 5px solid #005c99">
+            <div class="col-md-1" style="background-color: #70db70;">col 1</div>
+            <div class="col-md-5" style="background-color: #ffcce6;">col 5</div>
+            <div class="col-md-2" style="background-color: #ffffb3;">col 2</div>
+            <div class="col-md-4" style="background-color: #e6b3ff;">col 4</div>
+        </div>
+    </div>
+    <br>
+    <!--Columns without a row-->
+    <div class="container" style="border: 5px solid #e6005c">
+        <div class="col-md-2" style="background-color: #ccffb3;">col-md-2</div>
+        <div class="col-md-8" style="background-color: #cce6ff;">col-md-8</div>
+        <div class="col-md-2" style="background-color: #ffffcc;">col-md-2</div>
+    </div>
+    <br>
+    <div class="container-fluid" style="border: 5px solid #b30047">
+        <div class="col-md-2" style="background-color: #ccffb3;">col-md-2</div>
+        <div class="col-md-8" style="background-color: #cce6ff;">col-md-8</div>
+        <div class="col-md-2" style="background-color: #ffffcc;">col-md-2</div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+{
+    "link": "",
+    "name": "Javascript",
+    "data": [
+        {
+            "chapter": "",
+            "chapter_name": "",
+            "page": [
+                {
+                    "text": "Understanding DOM Event life cycle - 1",
+                    "html": "01_Understanding_DOM_Event_life_cycle.html"
+                },
+                {
+                    "text": "Understanding DOM Event life cycle - 2",
+                    "html": "02_Understanding_DOM_Event_life_cycle.html"
+                },
+                {
+                    "text": "Array Destructuring",
+                    "js": "03_Array_Destructuring.js"
+                },
+                {
+                    "text": "Destructure undefined",
+                    "js": "04_Destructure_undefined.js"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Without Form Control</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--Form without form-control class-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h4>Without Form Control</h4><br>
+                Name :<input type="text"><br><br>
+                Place :<select>
+                    <option>Karnataka</option>
+                    <option>Odisha</option>
+                    <option>Delhi</option>
+                </select><br><br>
+                About yourself: <textarea></textarea>
+            </div>
+        </div>
+    </div><br>
+    <!--Form with form-control class-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <h4>Using Form control</h4>
+                Name :<input type="text" class="form-control">
+                Place :<select class="form-control">
+                    <option>Karnataka</option>
+                    <option>Odisha</option>
+                    <option>Delhi</option>
+                </select>
+                About yourself :<textarea class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

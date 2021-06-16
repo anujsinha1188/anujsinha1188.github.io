@@ -1,0 +1,24 @@
+{
+    "link": "",
+    "name": "Javascript",
+    "data": [
+        {
+            "chapter": "",
+            "chapter_name": "",
+            "page": [
+                {
+                    "text": "Api call and display response",
+                    "html": "01_call_api_display_response.html"
+                },
+                {
+                    "text": "Determine if the input string’s opening and closing brackets are properly nested",
+                    "js": "02_opening_and_closing_brackets_are_properly_nested.js"
+                },
+                {
+                    "text": "Override the default implementation of console.log()",
+                    "html": "03_display_console_log_in_html.html"
+                }
+            ]
+        }
+    ]
+}

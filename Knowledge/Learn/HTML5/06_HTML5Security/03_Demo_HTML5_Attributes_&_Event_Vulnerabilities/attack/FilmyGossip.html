@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>FilmyGossip</title>
+</head>
+
+<body>
+    <h1 id="heading"> Welcome to FilmyGossip </h1>
+    <br>
+    <div id="container">
+        <h2 id="title">
+            <u>Submit Review</u>
+        </h2>
+        <br>
+        <div id="reviewBox">
+            <label for="" style="font-weight:bold">Movie Name:</label>
+            <br>
+            <textarea name="name" id="name" cols="110" rows="1"></textarea>
+            <br>
+            <label for="" style="font-weight:bold"> Summarize your experience in a few words</label>
+            <br>
+            <textarea name="review" id="review" cols="110" rows="5"></textarea>
+            <br>
+            <button onclick="submitReview()">submit</button>
+            <p id="content"></p>
+        </div>
+    </div>
+    </div>
+    <hr>
+    <footer>
+        <p>FilmyGossip
+            <span> &copy; 2019</span>
+        </p>
+        <p>
+            <u>Contact Us:</u>
+        </p>
+        <p>Mail Id: filmyupdates@gossip.com</p>
+        <p id="footer">** Disclaimer: This demo is only for Educational purpose. Please do not try this attack on any commercial website
+            **
+    </footer>
+    
+    <script>
+        function submitReview() {
+            var str = "Review submitted for movie " + document.getElementById("name").value;
+            document.getElementById("content").innerHTML = str;
+        }
+    </script>
+</body>
+
+</html>

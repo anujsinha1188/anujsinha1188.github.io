@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="attack.css">
+</head>
+
+<body>
+    <h1 id="attack">website replaced</h1>
+    <h1 id="heading"> Welcome to FilmyGossip </h1>
+    <div id="search">
+        <form method="GET" action="details.html">
+            <input type="text" placeholder="Search for a movie" name="movie">
+            <button type="submit">
+                <i class="fa fa-search"> </i>
+            </button>
+        </form>
+    </div>
+    <br>
+    <div id="container">
+        <h2 id="title">
+            <u>Customize the Website</u>
+        </h2>
+        <br>
+        <br>
+        <div id="customize">
+            <input type="text" id="bgcolor" placeholder="Enter background color">
+            <input type="text" id="textcolor" placeholder="Enter text color">
+            <input type="text" id="fontsize" placeholder="Enter font size in px">
+            <button onclick="applyStyles()">Apply</button>
+            <p>Go to home
+                <a href="home.html">click here</a>
+            </p>
+        </div>
+        <script>
+            function applyStyles() {
+                document.getElementById("page").style.backgroundColor = document.getElementById("bgcolor").value;
+                document.getElementById("page").style.color = document.getElementById("textcolor").value;
+                document.getElementById("page").style.fontSize = document.getElementById("fontsize").value;
+                localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
+                localStorage.setItem("textcolor", document.getElementById("textcolor").value);
+                localStorage.setItem("fontsize", document.getElementById("fontsize").value);
+            }
+        </script>
+    </div>
+    <hr>
+    <footer>
+        <p>FilmyGossip
+            <span> &copy; 2019</span>
+        </p>
+        <p>
+            <u>Contact Us:</u>
+        </p>
+        <p>Mail Id: filmyupdates@gossip.com</p>
+        <p id="footer">** Disclaimer: This demo is only for Educational purpose. Please do not try this attack on any commercial website
+            **
+    </footer>
+</body>
+
+</html>

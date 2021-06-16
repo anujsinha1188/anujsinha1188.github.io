@@ -1,0 +1,115 @@
+{
+    "name": "Bootstrap",
+    "data": [
+        {
+            "chapter": "01_Bootstrap",
+            "chapter_name": "Bootstrap",
+            "page": [
+                {
+                    "html": "01_Containers_Tryout.html",
+                    "text": "Containers - Tryout"
+                },
+                {
+                    "html": "02_Rows_Tryout.html",
+                    "text": "Rows - Tryout"
+                },
+                {
+                    "html": "03_Columns_Tryout.html",
+                    "text": "Columns - Tryout"
+                },
+                {
+                    "html": "04_Column_Sizing_and_Spacing_Tryout.html",
+                    "text": "Column Sizing and Spacing - Tryout"
+                },
+                {
+                    "html": "05_FlourishandBlotts/index.html",
+                    "text": "Grid System - Exercise"
+                }
+            ]
+        },
+        {
+            "chapter": "02_Content_Styling",
+            "chapter_name": "Content Styling",
+            "page": [
+                {
+                    "html": "01_Bootstrap_Text_Size_Tryout.html",
+                    "text": "Bootstrap Text Size - Tryout"
+                },
+                {
+                    "html": "02_Typography_Tryout.html",
+                    "text": "Typography - Tryout"
+                },
+                {
+                    "html": "03_Typography_Exercise.html",
+                    "text": "Typography - Exercise"
+                },
+                {
+                    "html": "04_Radio_buttons_and_Checkbox_Tryout.html",
+                    "text": "Radio buttons and Checkbox - Tryout"
+                },
+                {
+                    "html": "05_Button_Styling_and_Sizing_Tryout.html",
+                    "text": "Button: Styling and Sizing - Tryout"
+                },
+                {
+                    "html": "06_Badges_Tryout.html",
+                    "text": "Badges - Tryout"
+                },
+                {
+                    "html": "07_Images_Exercise.html",
+                    "text": "Images - Exercise"
+                }
+            ]
+        },
+        {
+            "chapter": "03_Content_Structuring",
+            "chapter_name": "Content Structuring",
+            "page": [
+                {
+                    "html": "01_Table_properties_Tryout.html",
+                    "text": "Table properties - Tryout"
+                },
+                {
+                    "html": "02_Tables_Exercise.html",
+                    "text": "Tables - Exercise"
+                }
+            ]
+        },
+        {
+            "chapter": "04_Navigation",
+            "chapter_name": "Navigation",
+            "page": [
+                {
+                    "html": "01_Navbar_Tryout.html",
+                    "text": "Navbar Tryout"
+                },
+                {
+                    "html": "02_Colourful_Navbar_Tryout.html",
+                    "text": "Colourful Navbar Tryout"
+                }
+            ]
+        },
+        {
+            "chapter": "05_Forms",
+            "chapter_name": "Forms",
+            "page": [
+                {
+                    "html": "01_Form_elements_with_Form-control_Tryout.html",
+                    "text": "Form elements with Form-control - Tryout"
+                },
+                {
+                    "html": "02_Form_elements_with_form-group_Tryout.html",
+                    "text": "Form elements with form-group - Tryout"
+                },
+                {
+                    "html": "03_Form_Layout_Tryout.html",
+                    "text": "Form Layout - Tryout"
+                },
+                {
+                    "html": "04_Form_Exercise.html",
+                    "text": "Form - Exercise"
+                }
+            ]
+        }
+    ]
+}

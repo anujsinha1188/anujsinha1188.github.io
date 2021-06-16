@@ -1,0 +1,185 @@
+{
+    "name": "HTML5",
+    "data": [
+        {
+            "chapter": "01_Introduction_to_HTML5",
+            "chapter_name": "Introduction to HTML5",
+            "page": [
+                {
+                    "html": "01_Tryout_Sample_Code.html",
+                    "text": "Tryout : Sample Code"
+                },
+                {
+                    "html": "02_Tryout_Case-insensitivity.html",
+                    "text": "Tryout : Case-insensitivity"
+                },
+                {
+                    "html": "03_Tryout_Document_Structure.html",
+                    "text": "Tryout : Document Structure"
+                },
+                {
+                    "html": "04_Tryout_Types_of_Elements.html",
+                    "text": "Tryout : Types of Elements"
+                },
+                {
+                    "html": "05_Tryout_Comment.html",
+                    "text": "Tryout : Comment"
+                },
+                {
+                    "html": "06_Tryout_Metadata_Element.html",
+                    "text": "Tryout : Metadata Element"
+                },
+                {
+                    "html": "07_Tryout_Sectioning_Elements.html",
+                    "text": "Tryout : Sectioning Elements"
+                }
+            ]
+        },
+        {
+            "chapter": "02_Basic_HTML_Elements",
+            "chapter_name": "Basic HTML Elements",
+            "page": [
+                {
+                    "html": "01_Tryout_Description_List.html",
+                    "text": "Tryout : Description List"
+                },
+                {
+                    "html": "02_Tryout_Quotation_and_Citation_Element.html",
+                    "text": "Tryout : Quotation and Citation Element"
+                },
+                {
+                    "html": "03_Tryout_3_Link_Element.html",
+                    "text": "Tryout - 3 : Link Element"
+                },
+                {
+                    "html": "04_Tryout_Link_Element.html",
+                    "text": "Tryout - 1 : Link Element"
+                },
+                {
+                    "html": "05_Tryout_Text-Level_Semantic_Elements.html",
+                    "text": "Tryout : Text-Level Semantic Elements"
+                },
+                {
+                    "html": "06_Tryout_HTML5_Global_Attributes.html",
+                    "text": "Tryout : HTML5 Global Attributes"
+                }
+            ]
+        },
+        {
+            "chapter": "03_Table_Elements",
+            "chapter_name": "Table Elements",
+            "page": [
+                {
+                    "html": "01_Tryout_Colspan/Rowspan_Attributes.html",
+                    "text": "Tryout : Colspan/Rowspan Attributes"
+                }
+            ]
+        },
+        {
+            "chapter": "04_Form_Elements",
+            "chapter_name": "Form Elements",
+            "page": [
+                {
+                    "html": "01_Tryout_1_Basic_Input_Elements.html",
+                    "text": "Tryout - 1 : Basic Input Elements"
+                },
+                {
+                    "html": "02_Tryout_2_Basic_Input_Elements.html",
+                    "text": "Tryout - 2 : Basic Input Elements"
+                },
+                {
+                    "html": "03_Tryout_Color_and_Date_Pickers.html",
+                    "text": "Tryout : Color and Date Pickers"
+                },
+                {
+                    "html": "04_Tryout_Select_and_Datalist.html",
+                    "text": "Tryout : Select and Datalist"
+                },
+                {
+                    "html": "05_Tryout_1_Other_Form_Elements.html",
+                    "text": "Tryout - 1 : Other Form Elements"
+                },
+                {
+                    "html": "06_Tryout_2_Other_Form_Elements.html",
+                    "text": "Tryout - 2 : Other Form Elements"
+                },
+                {
+                    "html": "07_Tryout_Input_Element_Attributes.html",
+                    "text": "Tryout : Input Element Attributes"
+                },
+                {
+                    "html": "08_Tryout_Editing_Elements.html",
+                    "text": "Tryout : Editing Elements"
+                }
+            ]
+        },
+        {
+            "chapter": "05_Media",
+            "chapter_name": "Media",
+            "page": [
+                {
+                    "html": "01_Tryout_Embedded_Elements.html",
+                    "text": "Tryout : Embedded Elements"
+                },
+                {
+                    "html": "02_Tryout_1_iframe_Element.html",
+                    "text": "Tryout - 1 : iframe Element"
+                },
+                {
+                    "html": "03_Tryout_2_iframe_Element.html",
+                    "text": "Tryout - 2 : iframe Element"
+                },
+                {
+                    "html": "04_Tryout_Sandbox.html",
+                    "text": "Tryout : Sandbox"
+                }
+            ]
+        },
+        {
+            "chapter": "06_HTML5Security",
+            "chapter_name": "HTML5 - Security",
+            "page": [
+                {
+                    "html": "01_Demo_Reflected_HTML_Injection/attack/FilmyGossip.html",
+                    "text": "Demo : Reflected HTML Injection (attack)"
+                },
+                {
+                    "html": "01_Demo_Reflected_HTML_Injection/mitigation/FilmyGossip.html",
+                    "text": "Demo : Reflected HTML Injection (mitigation)"
+                },
+                {
+                    "html": "02_Demo_Clickjacking/attack/attack.html",
+                    "text": "Demo : Clickjacking (attack)"
+                },
+                {
+                    "html": "02_Demo_Clickjacking/mitigation/attack.html",
+                    "text": "Demo : Clickjacking (mitigation)"
+                },
+                {
+                    "html": "03_Demo_HTML5_Attributes_&_Event_Vulnerabilities/attack/FilmyGossip.html",
+                    "text": "Demo : HTML5 Attributes & Event Vulnerabilities (attack)"
+                },
+                {
+                    "html": "03_Demo_HTML5_Attributes_&_Event_Vulnerabilities/mitigation/FilmyGossip.html",
+                    "text": "Demo : HTML5 Attributes & Event Vulnerabilities (mitigation)"
+                },
+                {
+                    "html": "04_Local_Storage_Vulnerabilities/attack/attack.html",
+                    "text": "Local Storage Vulnerabilities (attack)"
+                },
+                {
+                    "html": "04_Local_Storage_Vulnerabilities/mitigation/attack.html",
+                    "text": "Local Storage Vulnerabilities (mitigation)"
+                },
+                {
+                    "html": "05_Reverse_Tabnabbing/attack/attack.html",
+                    "text": "Reverse Tabnabbing (attack)"
+                },
+                {
+                    "html": "05_Reverse_Tabnabbing/mitigation/attack.html",
+                    "text": "Reverse Tabnabbing (mitigation)"
+                }
+            ]
+        }
+    ]
+}

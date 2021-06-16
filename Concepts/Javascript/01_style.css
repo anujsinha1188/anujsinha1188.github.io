@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 20px;
+  transition: background 800ms;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  background: hsl(193, 66%, 55%);
+  font: bold 40px helvetica, sans-serif;
+  color: red;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background: hsl(193, 66%, 75%);
+}
+
+button {
+  height: 100px;
+  width: 100px;
+  margin: calc(25% - 50px) calc(50% - 50px);
+  background: hsl(193, 66%, 95%);
+}
+
+.highlight {
+  background: green;
+}

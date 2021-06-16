@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AJ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <!--
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    -->
+    <script type="text/javascript" src="./js/bootstrap.js"></script>
+    <script>
+        window.onload = () => {
+            jsonFile = 'Home_data.json';
+            if (location.search.split('?')[1]) {
+                let path = location.search.split('?')[1].split('&')[0].split('=')[1];
+                let data = location.search.split('?')[1].split('&')[1].split('=')[1];
+                jsonFile = path + '/' + data;
+            }
+            getData(jsonFile);
+        }
+        let html = '';
+        let goTo = (chptr, topic) => {
+            let path = chptr.chapter;
+            let data = topic.data;
+            if (location.search.split('?')[1]) {
+                path = location.search.split('?')[1].split('&')[0].split('=')[1] + '/' + chptr.chapter;
+            }
+            if (topic.data) {
+                location.href = location.pathname + '?path=' + path + '/' + topic.name + '&data=' + topic.data;
+            }
+            else if (topic.html) {
+                location.href = path + '/' + topic.html;
+            }
+        }
+        var getData = (jsonFile) => {
+            fetch(jsonFile).then(response => response.json()).then(json => {
+                html = '' + '<h5 class="text-danger">' + json.name + '</h5>' +
+                    json.data.map(chptr => {
+                        return '<h6 class="text-muted">' + chptr.chapter_name + '</h6><div class="row gy-1">' + chptr.page.map(topic => {
+                            return '<div class="col-md-3"><div class="d-grid"><button class="btn btn-block btn-outline-primary btn-sm" onclick=\'goTo(' +
+                                JSON.stringify(chptr) + ',' + JSON.stringify(topic) +
+                                ')\'>' + topic.text + '</button></div></div>';
+                        }).join(' ') + '</div></br>';
+                    }).join(' ');
+                //document.getElementById('k-nav-title').innerHTML = json.name == 'Knowledge' ? 'Welcome to the ocean of knowledge' : json.name;
+                document.getElementById('index').innerHTML = html;
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="k-nav-menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a href="/home.html" class="navbar-brand mx-3">Home</a>
+            <div id="k-nav-menu" class="collapse navbar-collapse">
+                <ul class="navbar-nav">
+                    <span id="k-nav-title" class="navbar-text text-warning mx-3"></span>
+                    <li class="nav-item me-auto"><a class="nav-link mx-3"
+                            href="?path=/Knowledge&data=Knowledge_data.json">Knowledge</a></li>
+                    <li class="nav-item me-auto"><a class="nav-link mx-3"
+                            href="?path=/Projects&data=Projects_data.json">Projects</a></li>
+                    <li class="nav-item me-auto"><a class="nav-link mx-3"
+                            href="?path=/Concepts&data=Concepts_data.json">Concepts</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <div id='index'></div>
+    </div>
+</body>
+
+</html>

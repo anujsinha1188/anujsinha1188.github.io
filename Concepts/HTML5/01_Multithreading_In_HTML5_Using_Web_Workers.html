@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Test for Web Workers</title>
+    <script type="text/javascript">
+        {
+            //this function is used to check if dedicated web workers are supported by your browser or not.
+            function body_loaded() {
+                //window object has a class called Worker
+                if (window.Worker != undefined) {
+                    //browser supports
+                    window.document.getElementById("supported").style.display = "block";
+                }
+                else {
+                    window.document.getElementById("unsupported").style.display = "block";
+                }
+            }
+
+            function clicked() {
+                if (window.document.getElementById("input_text").value == "") {
+                    alert("Input a number");
+                }
+                else {
+                    //worker.js file is downloaded into a new thread
+                    var myWorker = new window.Worker('01_worker.js');
+
+                    //this is triggered when worker thread sends a message to main thread.
+                    myWorker.onmessage = function (event) {
+
+                        //event.data carries the information passed by the worker to main thread.
+                        var value = event.data.value;
+                        var errorMessage = event.data.errorMessage;
+
+                        //worker can send its own custom errors. this is not a runtime error.
+                        if (errorMessage) {
+                            alert("Error Occured: " + errorMessage);
+                        }
+                        else {
+                            alert("Sum of 10 to the number is: " + value);
+                        }
+
+                        //parent terminates the created worker.
+                        myWorker.terminate();
+                    };
+
+                    //errors of the worker thread is handled in the parent thread.
+                    myWorker.onerror = function (error) {
+                        error.preventDefault(); // prevent default error actions
+
+                        //display error message, file name and line number.
+                        alert(error.message + ' (' + error.filename + ':' + error.lineno + ')');
+                    }
+
+                    var myValue = parseInt(window.document.getElementById("input_text").value);
+
+                    //postMessage is used to start the worker and also pass message to the worker thread.
+                    //you can pass a string or json to postMessage function.
+                    myWorker.postMessage({ value: myValue });
+                }
+            }
+        }
+    </script>
+</head>
+
+<body onload="body_loaded()">
+    <div id="supported" style="display: none">
+        <input type="text" id="input_text"><input type="button" value="Click to Add 10" onclick="clicked()">
+    </div>
+    <div id="unsupported" style="display: none">
+        Unsupported
+    </div>
+</body>
+
+</html>
