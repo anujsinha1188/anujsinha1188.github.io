@@ -1,0 +1,5 @@
+INDEX VERSION 1.130+C:\Me\project\lex\lx-java\.metadata\.plugins\org.eclipse.jdt.core
+4191674208.index
+1074432716.index
+2008993851.index
+133516049.index

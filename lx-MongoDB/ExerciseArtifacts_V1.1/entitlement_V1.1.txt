@@ -1,0 +1,156 @@
+
+use Entitlement
+
+db.customers.insert({_id:1, custname: "megaretail", 	address:  {city:"Bangalore", 	country:"INDIA"} });
+db.customers.insert({_id:2, custname: "stayinhotels", 	address:  {city:"Mumbai", 	country:"INDIA"} });
+db.customers.insert({_id:3, custname: "randompublish", 	address: {city:"NewDelhi", 	country:"INDIA"} });
+db.customers.insert({_id:4, custname: "justpearls", 	address:  {city:"Hyderabad", 	country:"INDIA"} });
+db.customers.insert({_id:5, custname: "jaguarmotors", 	address:  {city:"London", 	country:"UK"} });
+db.customers.insert({_id:6, custname: "bigdatasoft", 	address:  {city:"PaloAlto",	country:"USA"} });
+db.customers.insert({_id:7, custname: "telecomair", 	address:  {city:"Sydney", 	country:"AUSTRALIA"} });
+
+db.users.insert({_id:101, username: "megaretailadmin", custid: 1 });
+db.users.insert({_id:102, username: "megaretailuser",  custid: 1 });
+
+db.users.insert({_id:103, username: "stayinhotelsadmin", custid: 2 });
+db.users.insert({_id:104, username: "stayinhotelsuser",  custid: 2 });
+
+db.users.insert({_id:105, username: "randompublishadmin", custid: 3 });
+db.users.insert({_id:106, username: "randompublishuser",  custid: 3 });
+
+db.users.insert({_id:107, username: "justpearlsadmin", custid: 4 });
+db.users.insert({_id:108, username: "justpearlsuser",  custid: 4 });
+
+db.users.insert({_id:109, username: "jaguarmotorsadmin", custid: 5 });
+db.users.insert({_id:110, username: "jaguarmotorsuser",  custid: 5 });
+
+db.users.insert({_id:111, username: "bigdatasoftadmin", custid: 6 });
+db.users.insert({_id:112, username: "bigdatasoftuser",  custid: 6 });
+
+db.users.insert({_id:113, username: "telecomairadmin", custid: 7 });
+db.users.insert({_id:114, username: "telecomairuser",  custid: 7 });
+
+
+
+
+
+db.roles.insert({_id:11, rolename: "admin", methods_entitled : ["create","drop"] });
+db.roles.insert({_id:12, rolename: "user", methods_entitled : ["insert","update","delete"] });
+db.roles.insert({_id:13, rolename: "audit", methods_entitled : ["audit"] });
+db.roles.insert({_id:14, rolename: "report", methods_entitled : ["read"] });
+db.roles.insert({_id:15, rolename: "support", methods_entitled : ["tickets"] });
+
+db.contracts.insert({_id:501, custid: 1, fromdt: new ISODate('2016-01-23'), enddt: new ISODate('2017-01-22')})
+db.contracts.insert({_id:502, custid: 1, fromdt: new ISODate('2017-01-15'), enddt: new ISODate('2018-01-14')})
+
+db.contracts.insert({_id:503, custid: 2, fromdt: new ISODate('2016-01-01'), enddt: new ISODate('2017-31-12')})
+db.contracts.insert({_id:504, custid: 2, fromdt: new ISODate('2016-01-01'), enddt: new ISODate('2016-31-12')})
+db.contracts.insert({_id:505, custid: 2, fromdt: new ISODate('2017-01-01'), enddt: new ISODate('2017-31-12')})
+
+db.contracts.insert({_id:506, custid: 3, fromdt: new ISODate('2014-01-01'), enddt: new ISODate('2014-31-12')})
+db.contracts.insert({_id:507, custid: 4, fromdt: new ISODate('2014-01-01'), enddt: new ISODate('2015-31-12') })
+db.contracts.insert({_id:508, custid: 5, fromdt: new ISODate('2015-01-01'), enddt: new ISODate('2016-31-12') })
+db.contracts.insert({_id:509, custid: 6, fromdt: new ISODate('2016-05-17'), enddt: new ISODate('2017-05-16') })
+db.contracts.insert({_id:510, custid: 7, fromdt: new ISODate('2017-02-15'), enddt: new ISODate('2018-02-14')})
+
+
+
+db.userToContract.remove({});
+
+db.userToContract.insert({_id:101, contractids: [501, 502] });
+db.userToContract.insert({_id:102, contractids: [502] });
+
+db.userToContract.insert({_id:103, contractids: [503,504,505] });
+db.userToContract.insert({_id:104, contractids: [504,505] });
+
+db.userToContract.insert({_id:105, contractids: [506] });
+db.userToContract.insert({_id:106, contractids: [506] });
+
+db.userToContract.insert({_id:107, contractids: [507] });
+db.userToContract.insert({_id:108, contractids: [507] });
+
+db.userToContract.insert({_id:109, contractids: [508] });
+db.userToContract.insert({_id:110, contractids: [508] });
+
+db.userToContract.insert({_id:111, contractids: [509] });
+db.userToContract.insert({_id:112, contractids: [509] });
+
+db.userToContract.insert({_id:113, contractids: [510] });
+db.userToContract.insert({_id:114, contractids: [510] });
+
+
+
+db.userRoleContract.insert({_id:101, contractids: [501, 502], 	roles: ["admin", "audit"] });
+db.userRoleContract.insert({_id:102, contractids: [502],  	roles: ["user", "report", "support"] });
+
+db.userRoleContract.insert({_id:103, contractids: [503,504,505], 	roles: ["admin", "audit"] });
+db.userRoleContract.insert({_id:104, contractids: [504,505],	roles: ["user", "report", "support"] });
+
+db.userRoleContract.insert({_id:105, contractids: [506],	roles: ["admin","audit","user","support" ] });
+db.userRoleContract.insert({_id:106, contractids: [506],  roles : ["report"] });
+
+db.userRoleContract.insert({_id:107, contractids: [507], roles : ["admin","audit","user","report", "support" ] });
+db.userRoleContract.insert({_id:108, contractids: [507], roles : ["admin","audit","user","report", "support" ] });
+
+db.userRoleContract.insert({_id:109, contractids: [508], roles : ["admin"] });
+db.userRoleContract.insert({_id:110, contractids: [508], roles : ["audit","user","report", "support" ] });
+
+db.userRoleContract.insert({_id:111, contractids: [509], roles : ["admin","audit","user","report", "support" ] });
+db.userRoleContract.insert({_id:112, contractids: [509], roles : ["admin","audit","user","report", "support" ] });
+
+db.userRoleContract.insert({_id:113, contractids: [510], roles : ["admin" ] });
+db.userRoleContract.insert({_id:114, contractids: [510], roles : ["admin","audit","user","report", "support" ]  });
+
+
+
+
+
+
+db.serviceline.insert ({_id:601, contractid: 501, serviceline :"datacenter" })
+db.serviceline.insert ({_id:602, contractid: 502, serviceline :"networks" })
+db.serviceline.insert ({_id:603, contractid: 503, serviceline :"analytics" })
+db.serviceline.insert ({_id:604, contractid: 504, serviceline :"networks" })
+db.serviceline.insert ({_id:605, contractid: 505, serviceline :"datacenter" })
+db.serviceline.insert ({_id:606, contractid: 506, serviceline :"networks" })
+db.serviceline.insert ({_id:607, contractid: 507, serviceline :"analytics" })
+db.serviceline.insert ({_id:608, contractid: 508, serviceline :"systemsintegration" })
+db.serviceline.insert ({_id:609, contractid: 509, serviceline :"systemsintegration" })
+db.serviceline.insert ({_id:610, contractid: 510, serviceline :"networks" })
+
+
+db.installedbase.insert({_id:801,serviceline_id: 601, product:"datacenter_bridge" })
+db.installedbase.insert({_id:802, serviceline_id: 602,product:"network_router" })
+db.installedbase.insert({_id:803,serviceline_id: 603, product:"hadoop-hiveDW" })
+db.installedbase.insert({_id:804, serviceline_id: 604,product:"network_router" })
+db.installedbase.insert({_id:805,serviceline_id: 605, product:"datacenter_switch" })
+db.installedbase.insert({_id:806,serviceline_id: 606, product:"network_router" })
+db.installedbase.insert({_id:807,serviceline_id: 607, product:"hadoop-hiveDW" })
+db.installedbase.insert({_id:808,serviceline_id: 608, product:"si-eai" })
+db.installedbase.insert({_id:809,serviceline_id: 609, product:"si-erp-SAP" })
+db.installedbase.insert({_id:810,serviceline_id: 610, product:"network_router" })
+
+
+
+
+db.userToProduct.insert({_id:101, product: ["datacenter_bridge", "network_router"] });
+db.userToProduct.insert({_id:102, product: ["network_router"] });
+
+db.userToProduct.insert({_id:103, product: ["hadoop-hiveDW","network_router","datacenter_switch"] });
+db.userToProduct.insert({_id:104, product: ["network_router", "datacenter_switch"] });
+
+db.userToProduct.insert({_id:105, product: ["network_router"] });
+db.userToProduct.insert({_id:106, product: ["network_router"] });
+
+db.userToProduct.insert({_id:107, product: ["hadoop-hiveDW"] });
+db.userToProduct.insert({_id:108, product: ["hadoop-hiveDW"] });
+
+db.userToProduct.insert({_id:109, product: ["si-eai"] });
+db.userToProduct.insert({_id:110, product: ["si-eai"] });
+
+db.userToProduct.insert({_id:111, product: ["si-erp-SAP"] });
+db.userToProduct.insert({_id:112, product: ["si-erp-SAP"] });
+
+db.userToProduct.insert({_id:113, product: ["network_router"] });
+db.userToProduct.insert({_id:114, product: ["network_router"] });
+
+
