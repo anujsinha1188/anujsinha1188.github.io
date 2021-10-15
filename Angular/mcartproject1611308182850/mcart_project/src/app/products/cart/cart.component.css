@@ -1,0 +1,19 @@
+.panelpos{
+    position: relative; top: 150px; left: 380px; width: 46%;
+}
+
+.paymentpanelpos{
+    position: relative; 
+    top: 150px; 
+    left: 380px; 
+    text-align: center; 
+    width: 43%;
+}
+
+.tableheadercolor{
+    color: blue;
+}
+
+.center{
+    text-align:center;
+}

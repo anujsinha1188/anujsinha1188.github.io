@@ -1,0 +1,111 @@
+<div *ngIf="submit" class='panel panel-primary panelpos'>
+	<div class='panel-heading'>{{ pageTitle }}</div>
+	<div class='panel-body'>
+<!-- Displays the selected products in a table -->
+		<table class='table' *ngIf='selectedProducts && selectedProducts.length' style="margin-bottom: 0px; margin-right: 0px">
+			<thead>
+				<tr class="tableheadercolor">
+					<th class="center">Product</th>
+					<th class="center">Quantity</th>
+					<th class="center">Price</th>
+					<th class="center">Total Price</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor='let product of selectedProducts; let i=index'>
+					<td class="center">{{product.productName}}</td>
+					<td class="center">
+						<input type="number" id="quant" class="" [(ngModel)]=product.quantity  onkeypress="return (event.charCode == 8 || event.charCode == 0 || 
+						event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 
+						57"  min="1" max="100" (change)="updateCart(product)">
+					</td>
+					<td class="center">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+					<td class="center">{{ product.totalPrice | currency:'USD':'symbol':'1.2-2'}}</td>
+					<td>
+						<a (click)="remove(i)">
+							<span title="Delete" class="glyphicon glyphicon-trash"></span>
+						</a>
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<th class="center">Total</th>
+					<td class="center">
+						<strong>{{ grandTotal | currency:'USD':'symbol':'1.2-2' }}</strong>
+					</td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+
+					<td>
+						<button type="button" class="btn btn-primary" (click)='onBack()'>
+							<span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+						</button>
+					</td>
+					<td>
+						<button type="button" class="btn btn-primary" (click)="checkout()">
+							Checkout
+							<span class="glyphicon glyphicon-play"></span>
+						</button>
+					</td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+
+		</table>
+
+	</div>
+</div>
+<!-- Thank you page when checkout button is clicked -->
+<div *ngIf="!submit" class='panel panel-primary paymentpanelpos'>
+	<div class='panel-heading'>{{ pageTitle }}</div>
+	<div class='panel-body' style="position:relative;left:-40px;padding:0px;margin:0px">
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;You have purchased following items.Thank you for
+		making the payment.
+		<br/>Your order will be shipped soon...
+		<br />
+		<br />
+		<table class='table' align="center" *ngIf='selectedProducts && selectedProducts.length' style="margin-left: 90px; width: auto; margin-bottom: 0px; margin-right: 0px">
+			<thead>
+				<tr style="color: blue">
+					<th>Order Id</th>
+					<th>Product</th>
+					<th>Quantity</th>
+					<th style="text-align: center">Price</th>
+					<th>Total Price</th>
+
+				</tr>
+			</thead>
+			<tbody>
+				<tr *ngFor='let product of selectedProducts; let i=index'>
+					<td>{{product.orderId}}</td>
+					<td style="width: auto">{{product.productName}}</td>
+					<td>{{product.quantity}}</td>
+					<td align="center">{{ product.price | currency:'USD':'symbol':'1.2-2' }}</td>
+					<td>{{product.totalPrice| currency:'USD':'symbol':'1.2-2'}}</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td align="center">Total</td>
+					<td>
+						<strong>{{grandTotal|currency:'USD':'symbol':'1.2-2'}}</strong>
+					</td>
+
+				</tr>
+
+			</tbody>
+		</table>
+	</div>
+
+	<div class='panel-footer'>
+		<a class='btn btn-primary' (click)='gotoProducts()'>
+			<i class='glyphicon glyphicon-chevron-left'></i> Go to Products Page
+		</a>
+	</div>
+</div>

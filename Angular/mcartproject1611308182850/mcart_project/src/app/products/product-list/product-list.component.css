@@ -1,0 +1,85 @@
+thead {
+	color: #337AB7;
+}
+.display{
+	display:"";
+}
+.row{
+    margin-top:40px;
+    padding: 0 10px;
+}
+
+.clickable{
+    cursor: pointer;   
+}
+
+.head-span {
+	margin-top: -20px;
+	font-size: 15px;
+}
+
+.heading-color {
+	background-color: white;
+	color: #FF00FF;
+}
+
+.dropdown-menu.columns-3 {
+	min-width: 600px;
+}
+.dropdown-menu li a {
+	padding: 5px 15px;
+	font-weight: 300;
+}
+.multi-column-dropdown {
+	list-style: none;
+}
+
+@media (max-width: 800px) {
+	.dropdown-menu.multi-column {
+		min-width: 240px !important;
+		overflow-x: hidden;
+	}
+}
+
+.caret {
+	border-top:4px solid magenta;
+}
+
+.navbarpos{
+	background-color: white;
+	top: 50px; 
+	width:100%
+}
+
+.searchboxpos{
+	position:relative;
+	top:10px;
+}
+
+.cartpos{
+	position:relative;
+	top:10px;
+	padding:8px
+}
+.carouselpos{
+	position:relative;
+	top:65px;
+	width:100%;
+}
+
+.carouselheight{
+	height:350px;
+}
+
+.noborder{
+	border:0;
+}
+
+.bgcolor{
+	background-color: white;
+}
+
+.tabpos{
+	width: 50%;
+	text-align: center;
+}

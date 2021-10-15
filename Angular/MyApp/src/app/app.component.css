@@ -1,0 +1,23 @@
+.bordered {
+    border: 1px dashed black;
+    background-color: #eee;
+}
+
+h3 {
+    color: #369;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 250%;
+}
+
+p {
+    color: #ff0080;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 150%;
+}
+
+.highlight {
+    border: 2px solid coral;
+    background-color: aliceblue;
+    text-align: center;
+    margin-bottom: 20px;
+}

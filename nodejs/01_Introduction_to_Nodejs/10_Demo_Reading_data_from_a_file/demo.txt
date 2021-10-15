@@ -1,0 +1,2 @@
+Node.js is an open-source JavaScript run time environment which helps the developers to build fast, scalable network applications.
+Express is a very popular framework for Node.js, which simplifies the Node application development.

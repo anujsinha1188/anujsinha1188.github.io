@@ -1,0 +1,46 @@
+[
+	{
+		"productId": 1,
+		"productName": "Apple iPad Mini 2",
+		"productCode": "TAB-120",
+		"description": "16GB, White",
+		"price": 450,
+		"imageUrl": "assets/imgs/apple_ipad_mini.jpg",
+		"manufacturer": "Apple",
+		"ostype": "iOS",
+		"rating": 4
+	},
+	{
+		"productId": 2,
+		"productName": "Apple iPad Air2",
+		"productCode": "TAB-124",
+		"description": "64GB, Black",
+		"price": 600,
+		"imageUrl": "assets/imgs/ipad_air.jpg",
+		"manufacturer": "Apple",
+		"ostype": "iOS",
+		"rating": 3
+	},
+	{
+		"productId": 3,
+		"productName": "Samsung Galaxy J",
+		"productCode": "TAB-125",
+		"description": "8GB, Gold",
+		"price": 550,
+		"imageUrl": "assets/imgs/samsung_tab.jpg",
+		"manufacturer": "Samsung",
+		"ostype": "Android",
+		"rating": 4
+	},
+	{
+		"productId": 4,
+		"productName": "Micromax Canvas P290",
+		"productCode": "TAB-126",
+		"description": "8GB, Black",
+		"price": 425,
+		"imageUrl": "assets/imgs/tablet.jpg",
+		"manufacturer": "Micromax",
+		"ostype": "Android",
+		"rating": 3
+	}
+]

@@ -1,0 +1,36 @@
+<div class="container panelpos">
+	<div class="row">
+		<div class="col-xs-7 col-xs-offset-3">
+			<div class='panel panel-primary'>
+				<div class='panel-heading'>{{pageTitle}}</div>
+				<div class='panel-body'>
+					<!-- Displays the selected product details -->
+					<table class="table table-striped tablebgcolor" *ngIf = "product">
+						<tr>
+							<td align="center"><img [src]='product.imageUrl' [style.width.px]='imageWidth' [style.margin.px]='imageMargin' class='img-thumbnail'
+								/></td>
+
+							<td>
+								<div class="txtsize txtcolor">{{product.productName}}</div>
+								<div>by {{product.manufacturer}}</div>
+								<div>
+									<!-- Loads RatingComponent to display the rating of each product -->
+									<app-rating class="ratingcolor" [rate]='product.rating'></app-rating>
+								</div>
+								<hr class="hrcolor">
+								<div>Price: {{product.price}}</div>
+
+								<div>Description: {{product.description}}</div>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+				</div>
+				<div class='panel-footer'>
+					<a class='btn btn-default backbtnpos' (click)='onBack()'>
+						<i class='glyphicon glyphicon-chevron-left'></i> Back
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
